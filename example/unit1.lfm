@@ -1,0 +1,1477 @@
+object Form1: TForm1
+  Left = 295
+  Height = 802
+  Top = 115
+  Width = 1311
+  Caption = 'Form1'
+  ClientHeight = 802
+  ClientWidth = 1311
+  Color = 15987699
+  DesignTimePPI = 120
+  Position = poScreenCenter
+  LCLVersion = '2.2.4.0'
+  object FluentNavigationView1: TFluentNavigationView
+    Left = 0
+    Height = 802
+    Top = 0
+    Width = 400
+    ParentFont = False
+    OnSelectMenuItem = FluentNavigationView1SelectMenuItem
+    MenuItems = <    
+      item
+        Caption = 'Home'
+        Icon.PathString = 'A27,2,10,10,-45,45A51,24,7,7,45,90A46,46,12,12,90,180A38,54,4,4,-180,-90A34,38,4,4,90,0A26,38,4,4,0,-90A22,54,4,4,90,180A6,46,12,12,-180,-90A6,24,7,7,-90,-45ZS'
+        Icon.CodePoint = 59407
+        Icon.Scale = 1
+        Page = PageHome
+      end    
+      item
+        Caption = 'Icons'
+        Icon.PathString = 'M56,0L64,0L64,64L0,64L0,56L32,56L56,32ZPR10,10,48,48,9SUM8,48A22,30,12,12,-45,45L48,48S1R6,6,44,44,6SE34,14,8,8F1'
+        Icon.CodePoint = 59577
+        Icon.Scale = 1
+        Page = PageIcons
+      end    
+      item
+        Caption = 'Buttons'
+        Icon.PathString = 'A4,6,56,56,30,330SM32,2L32,26S1'
+        Icon.CodePoint = 59368
+        Icon.Scale = 1
+        Page = PageButtons
+      end    
+      item
+        Caption = 'Basic'
+        Icon.PathString = 'R2,2,60,60,6SM14,30L26,42L50,18S1'
+        Icon.CodePoint = 59194
+        Icon.Scale = 1
+        Page = PageBasic
+      end    
+      item
+        Caption = 'Text'
+        Icon.PathString = 'M0.0L39,0L15,64L0,64ZPM2,38L16,2L30,38M7,27L25,27SUM22,62L40,14L58,62M29,46L51,46M18,62L26,62M54,62L62,62S'
+        Icon.CodePoint = 59602
+        Icon.Scale = 1
+        Page = PageText
+      end    
+      item
+        Caption = 'Status'
+        Icon.PathString = 'M0,0L0,64,L64,64,L64,0ZE-4,-4,56,56PA18,18,44,44,-210,120L62,62ZSUA2,2,44,44-120,210L2,46ZM18,20L30,20M18,28L27,28S'
+        Icon.CodePoint = 59634
+        Icon.Scale = 1
+        Page = PageStatus
+      end    
+      item
+        Caption = 'ContentDialog'
+        Icon.PathString = 'M2,62A2,2,60,60,-120,210ZM22,26L42,26M22,38L34,38S'
+        Icon.CodePoint = 59581
+        Icon.Scale = 1
+        Page = PageDialog
+      end    
+      item
+        Caption = 'Navigation'
+        Icon.PathString = 'M2,10L62,10M2,30L62,30M2,50L62,50S'
+        Icon.CodePoint = 59136
+        Icon.Scale = 1
+        Page = PageNavigation
+      end    
+      item
+        Caption = 'Settings'
+        Icon.PathString = 'M26,2L38,2C55,12,41,16,41,16L61,22C61,42,50,32,50,32L55,52C38,62,41,48,41,48L26,62C9,52,23,48,23,48L3,42C3,22,14,32,14,32L9,12C26,2,23,16,23,16E22,22,20,20S'
+        Icon.CodePoint = 59155
+        Icon.Scale = 1
+        Page = PageSettings
+      end>
+    SelectMenuItem = 0
+  end
+  object Notebook1: TNotebook
+    Left = 400
+    Height = 802
+    Top = 0
+    Width = 911
+    PageIndex = 8
+    Align = alClient
+    Color = clWindow
+    TabOrder = 0
+    object PageHome: TPage
+      Color = 15987699
+      object FluentIconButton1: TFluentIconButton
+        Left = 171
+        Height = 45
+        Top = 362
+        Width = 50
+        PathIcon.Scale = 1
+        AutoSize = True
+        Caption = 'FluentIconButton1'
+        Font.Height = -15
+        ParentFont = False
+      end
+      object FluentIconView1: TFluentIconView
+        Left = 23
+        Height = 320
+        Top = 190
+        Width = 320
+        PathIcon.PathString = 'M34.3,34.5C26.8,43,27.8,36.5,25.8,39C23.3,55,27.3,49,18.8,46.5C42.3,56.5,26.5,60.5,36.5,57.5C55.3,45,52.3,53,56.5,51C46.3,38.5,54.3,38.5,50.3,43C34.3,34.5,43.3,34,41.3,32.5FM54,14.7C54.4,18,54.8,16,54.8,17.3C48.8,24,50.4,16.7,50,21.5C48.6,31.8,46.8,28.4,45,29C57.3,19.6,58.8,36.7,62.4,25C54.6,13.7,56.5,16.3,56,16ZFM32,4C33,8,32.5,5.5,34,7C30,12,32,8,28.5,7C31,18,32,14.5,31,16.5C36,22.5,31,22,34,22.5C36,8,42.5,22.5,47,13.5C32,3,35.5,6.5,34.5,4.5ZFM17.5,7C16.5,13,16,8,16,10.5C27,24,11,22,21,30.5C24.5,16,30,20,25,18C19,11.5,24,14.5,25,9.5C17.5,7,16,8,19,8.5FM5,34C18.5,41.4,5.3,40.3,11.7,46.6C14.3,32.4,21.7,37.7,21,35.8C6,31,10.5,30.5,10,27C3.7,27.7,4.7,30.5,5.7,29C5,34,3.3,30,4,32.8F'
+        PathIcon.AccentColor = clBlue
+        PathIcon.Scale = 1
+        OnMouseDown = FluentIconView1MouseDown
+        OnMouseUp = FluentIconView1MouseUp
+      end
+      object fbStartAnimation1: TFluentButton
+        Left = 408
+        Height = 40
+        Top = 190
+        Width = 240
+        Caption = 'StartAnimation1'
+        OnClick = fbStartAnimation1Click
+      end
+      object fbStartAnimation2: TFluentButton
+        Left = 408
+        Height = 40
+        Top = 240
+        Width = 240
+        Caption = 'StartAnimation2'
+        OnClick = fbStartAnimation2Click
+      end
+      object fbStartAnimation3: TFluentButton
+        Left = 408
+        Height = 40
+        Top = 288
+        Width = 240
+        Caption = 'StartAnimation3'
+        OnClick = fbStartAnimation3Click
+      end
+      object fbStartAnimation4: TFluentButton
+        Left = 408
+        Height = 40
+        Top = 336
+        Width = 240
+        Caption = 'StartAnimation4'
+        OnClick = fbStartAnimation4Click
+      end
+      object txtHomeSubtitle: TFluentTextBlock
+        Left = 24
+        Height = 26
+        Top = 97
+        Width = 863
+        Align = alTop
+        BorderSpacing.Around = 24
+        Caption = 'Home page'
+        Font.Height = -20
+        ParentFont = False
+      end
+      object txtHomeTitle: TFluentTextBlock
+        Left = 24
+        Height = 49
+        Top = 24
+        Width = 863
+        Align = alTop
+        BorderSpacing.Around = 24
+        Caption = 'Home'
+        Font.Height = -37
+        ParentFont = False
+      end
+    end
+    object PageIcons: TPage
+      OnBeforeShow = PageIconsBeforeShow
+      object ScrollBox1: TScrollBox
+        Left = 31
+        Height = 503
+        Top = 149
+        Width = 880
+        HorzScrollBar.Page = 1
+        VertScrollBar.Page = 1
+        VertScrollBar.Tracking = True
+        Align = alClient
+        BorderSpacing.Left = 31
+        BorderStyle = bsNone
+        ClientHeight = 503
+        ClientWidth = 880
+        TabOrder = 0
+        object FlowPanelIcons: TFlowPanel
+          Left = 0
+          Height = 0
+          Top = 0
+          Width = 880
+          Align = alTop
+          AutoSize = True
+          BevelOuter = bvNone
+          ControlList = <>
+          FlowLayout = tlTop
+          FlowStyle = fsLeftRightTopBottom
+          TabOrder = 0
+        end
+      end
+      object PanelIconsBottom: TPanel
+        Left = 31
+        Height = 88
+        Top = 683
+        Width = 849
+        Align = alBottom
+        AutoSize = True
+        BorderSpacing.Around = 31
+        BevelOuter = bvNone
+        ClientHeight = 88
+        ClientWidth = 849
+        TabOrder = 1
+        object cbEnableAccentColor: TFluentCheckBox
+          Left = 24
+          Height = 40
+          Top = 24
+          Width = 266
+          Align = alLeft
+          BorderSpacing.Around = 24
+          Caption = 'Accent color'
+          Font.Height = -18
+          OnChange = cbEnableAccentColorChange
+          ParentFont = False
+        end
+      end
+      object txtIconsSubtitle: TFluentTextBlock
+        Left = 24
+        Height = 27
+        Top = 98
+        Width = 863
+        Align = alTop
+        BorderSpacing.Around = 24
+        Caption = 'Represents an icon whose content is a vector path. All icons match the font Segoe Fluent Icons'
+        Font.Height = -20
+        ParentFont = False
+      end
+      object txtIconsTitle: TFluentTextBlock
+        Left = 24
+        Height = 50
+        Top = 24
+        Width = 863
+        Align = alTop
+        BorderSpacing.Around = 24
+        Caption = 'Icons'
+        Font.Height = -37
+        ParentFont = False
+      end
+    end
+    object PageButtons: TPage
+      object Label10: TLabel
+        Left = 24
+        Height = 47
+        Top = 24
+        Width = 863
+        Align = alTop
+        BorderSpacing.Around = 24
+        Caption = 'Buttons'
+        Font.Height = -35
+        Font.Name = 'Segoe UI Semibold'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label17: TLabel
+        Left = 31
+        Height = 25
+        Top = 102
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = 'Represents buttons controls'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object lblButton2: TLabel
+        Left = 31
+        Height = 25
+        Top = 158
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = '1. Button'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object panButton1: TPanel
+        Left = 31
+        Height = 111
+        Top = 214
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        BevelOuter = bvNone
+        ClientHeight = 111
+        ClientWidth = 849
+        Color = 15987699
+        ParentColor = False
+        TabOrder = 0
+        object btnStandard: TFluentButton
+          Left = 24
+          Height = 40
+          Top = 24
+          Width = 199
+          Caption = 'Click me'
+          ParentFont = False
+        end
+        object cbAccentStyle1: TFluentCheckBox
+          Left = 536
+          Height = 40
+          Top = 24
+          Width = 214
+          Caption = 'Accent style'
+          OnChange = cbAccentStyleChange
+          ParentFont = False
+        end
+        object cbButtonDisabled1: TFluentCheckBox
+          Left = 536
+          Height = 40
+          Top = 64
+          Width = 214
+          Caption = 'Disabled'
+          OnChange = cbButtonDisabledChange
+          ParentFont = False
+        end
+      end
+      object lblToggleButton1: TLabel
+        Left = 31
+        Height = 25
+        Top = 356
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = '2. ToggleButton'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object panToggleButton1: TPanel
+        Left = 31
+        Height = 89
+        Top = 412
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        BevelOuter = bvNone
+        ClientHeight = 89
+        ClientWidth = 849
+        Color = 15987699
+        ParentColor = False
+        TabOrder = 1
+        object ToggleButton1: TFluentToggleButton
+          Left = 24
+          Height = 40
+          Top = 24
+          Width = 199
+          Caption = 'ToggleButton'
+          OnChange = ToggleButtonChange
+          ParentFont = False
+        end
+        object lblToggleResult1: TLabel
+          AnchorSideLeft.Control = ToggleButton1
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = ToggleButton1
+          AnchorSideTop.Side = asrCenter
+          Left = 239
+          Height = 25
+          Top = 32
+          Width = 5
+          BorderSpacing.Around = 16
+          Caption = ' '
+          Font.Height = -18
+          Layout = tlCenter
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+      end
+      object lblToggleButton2: TLabel
+        Left = 31
+        Height = 25
+        Top = 532
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = '3. HyperlinkButton'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object panToggleButton2: TPanel
+        Left = 31
+        Height = 159
+        Top = 588
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        BevelOuter = bvNone
+        ClientHeight = 159
+        ClientWidth = 849
+        Color = 15987699
+        ParentColor = False
+        TabOrder = 2
+        object lblToggleResult2: TLabel
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Side = asrCenter
+          Left = 239
+          Height = 25
+          Top = 31
+          Width = 5
+          BorderSpacing.Around = 16
+          Caption = ' '
+          Font.Height = -19
+          Layout = tlCenter
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+        object FluentHyperlinkButton2: TFluentHyperlinkButton
+          Left = 24
+          Height = 40
+          Top = 24
+          Width = 199
+          Caption = 'Go to Google'
+          OnClick = FluentHyperlinkButton2Click
+          ParentFont = False
+        end
+        object FluentHyperlinkButton3: TFluentHyperlinkButton
+          Left = 24
+          Height = 40
+          Top = 89
+          Width = 199
+          Caption = 'Go to Status page'
+          OnClick = FluentHyperlinkButton1Click
+          ParentFont = False
+        end
+      end
+    end
+    object PageBasic: TPage
+      object Label5: TLabel
+        Left = 24
+        Height = 47
+        Top = 24
+        Width = 863
+        Align = alTop
+        BorderSpacing.Around = 24
+        Caption = 'Basic'
+        Font.Height = -35
+        Font.Name = 'Segoe UI Semibold'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label7: TLabel
+        Left = 24
+        Height = 25
+        Top = 95
+        Width = 863
+        Align = alTop
+        BorderSpacing.Around = 24
+        Caption = 'Represents basic input controls'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object sbBasic: TScrollBox
+        Left = 0
+        Height = 658
+        Top = 144
+        Width = 911
+        HorzScrollBar.Page = 798
+        VertScrollBar.Page = 572
+        VertScrollBar.Tracking = True
+        Align = alClient
+        BorderStyle = bsNone
+        ClientHeight = 658
+        ClientWidth = 911
+        TabOrder = 0
+        object lblCheckBox: TLabel
+          Left = 24
+          Height = 25
+          Top = 24
+          Width = 863
+          Align = alTop
+          BorderSpacing.Around = 24
+          Caption = '1. CheckBox'
+          Font.Height = -19
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+        object panCheckBox: TPanel
+          Left = 24
+          Height = 89
+          Top = 73
+          Width = 863
+          Align = alTop
+          BorderSpacing.Around = 24
+          BevelOuter = bvNone
+          ClientHeight = 89
+          ClientWidth = 863
+          Color = 15987699
+          ParentColor = False
+          TabOrder = 0
+          object FluentCheckBox: TFluentCheckBox
+            Left = 24
+            Height = 40
+            Top = 26
+            Width = 112
+            AutoSize = True
+            Caption = 'CheckBox'
+            OnChange = FluentCheckBoxChange
+            ParentFont = False
+          end
+          object lblResult4: TLabel
+            AnchorSideLeft.Control = FluentCheckBox
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideTop.Control = FluentCheckBox
+            AnchorSideRight.Control = panCheckBox
+            AnchorSideRight.Side = asrBottom
+            AnchorSideBottom.Control = FluentCheckBox
+            AnchorSideBottom.Side = asrBottom
+            Left = 536
+            Height = 40
+            Top = 26
+            Width = 312
+            Align = alCustom
+            Anchors = []
+            AutoSize = False
+            BorderSpacing.Left = 15
+            BorderSpacing.Right = 15
+            Font.Height = -18
+            Layout = tlCenter
+            ParentColor = False
+            ParentFont = False
+            WordWrap = True
+          end
+        end
+        object lblSlider: TLabel
+          Left = 24
+          Height = 25
+          Top = 370
+          Width = 863
+          Align = alTop
+          BorderSpacing.Around = 24
+          Caption = '3. Slider'
+          Font.Height = -19
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+        object panSlider: TPanel
+          Left = 24
+          Height = 129
+          Top = 419
+          Width = 863
+          Align = alTop
+          BorderSpacing.Around = 24
+          BevelOuter = bvNone
+          ClientHeight = 129
+          ClientWidth = 863
+          Color = 15987699
+          ParentColor = False
+          TabOrder = 1
+          object Slider1: TFluentSlider
+            Left = 24
+            Height = 40
+            Top = 24
+            Width = 520
+            Max = 100
+            ShowTip = True
+            TickFrequency = 10
+          end
+          object cbReversed: TFluentCheckBox
+            Left = 24
+            Height = 40
+            Top = 75
+            Width = 214
+            Caption = 'Reversed'
+            OnChange = cbReversedChange
+            ParentFont = False
+          end
+          object cbShowTicks: TFluentCheckBox
+            Left = 280
+            Height = 40
+            Top = 75
+            Width = 214
+            Caption = 'Show ticks'
+            OnChange = cbShowTicksChange
+            ParentFont = False
+          end
+          object cbShowTip: TFluentCheckBox
+            Left = 536
+            Height = 40
+            Top = 75
+            Width = 214
+            Caption = 'Show tip'
+            Checked = True
+            OnChange = cbShowTipChange
+            ParentFont = False
+          end
+        end
+        object panRadioButton: TPanel
+          Left = 24
+          Height = 111
+          Top = 235
+          Width = 863
+          Align = alTop
+          BorderSpacing.Around = 24
+          BevelOuter = bvNone
+          ClientHeight = 111
+          ClientWidth = 863
+          Color = 15987699
+          ParentColor = False
+          TabOrder = 2
+          object FluentRadioButton1: TFluentRadioButton
+            Left = 24
+            Height = 40
+            Top = 24
+            Width = 144
+            AutoSize = True
+            Caption = 'RadioButton1'
+            OnChange = FluentRadioButton1Change
+            ParentFont = False
+          end
+          object FluentRadioButton2: TFluentRadioButton
+            Left = 24
+            Height = 40
+            Top = 64
+            Width = 144
+            AutoSize = True
+            Caption = 'RadioButton2'
+            OnChange = FluentRadioButton2Change
+            ParentFont = False
+          end
+          object lblRadioButtonResult: TLabel
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideTop.Side = asrCenter
+            AnchorSideBottom.Side = asrBottom
+            Left = 536
+            Height = 1
+            Top = 48
+            Width = 1
+            BorderSpacing.Left = 16
+            Font.Height = -18
+            Layout = tlCenter
+            ParentColor = False
+            ParentFont = False
+            WordWrap = True
+          end
+        end
+        object lblButton1: TLabel
+          Left = 24
+          Height = 25
+          Top = 186
+          Width = 863
+          Align = alTop
+          BorderSpacing.Around = 24
+          Caption = '2. RadioButton'
+          Font.Height = -19
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+      end
+    end
+    object PageText: TPage
+      object Label9: TLabel
+        Left = 24
+        Height = 47
+        Top = 24
+        Width = 863
+        Align = alTop
+        BorderSpacing.Around = 24
+        Caption = 'Text'
+        Font.Height = -35
+        Font.Name = 'Segoe UI Semibold'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label14: TLabel
+        Left = 31
+        Height = 25
+        Top = 102
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = 'Represents an text input controls'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object LabelDialog3: TLabel
+        Left = 31
+        Height = 25
+        Top = 158
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = '1. TextBox'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object Panel3: TPanel
+        Left = 31
+        Height = 112
+        Top = 214
+        Width = 849
+        Align = alTop
+        AutoSize = True
+        BorderSpacing.Around = 31
+        BevelOuter = bvNone
+        ClientHeight = 112
+        ClientWidth = 849
+        Color = 15987699
+        ParentColor = False
+        TabOrder = 0
+        object FluentTextBox1: TFluentTextBox
+          Left = 16
+          Height = 76
+          Top = 16
+          Width = 240
+          Align = alLeft
+          BorderSpacing.Around = 16
+          Header = 'Enter your name'
+          MaxLength = 0
+          ParentFont = False
+          TabOrder = 0
+        end
+      end
+      object LabelDialog4: TLabel
+        Left = 31
+        Height = 25
+        Top = 357
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = '2. PasswordBox'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object Panel4: TPanel
+        Left = 31
+        Height = 72
+        Top = 413
+        Width = 849
+        Align = alTop
+        AutoSize = True
+        BorderSpacing.Around = 31
+        BevelOuter = bvNone
+        ClientHeight = 72
+        ClientWidth = 849
+        Color = 15987699
+        ParentColor = False
+        TabOrder = 1
+        object FluentPasswordBox1: TFluentPasswordBox
+          Left = 16
+          Height = 40
+          Top = 16
+          Width = 240
+          Align = alLeft
+          BorderSpacing.Around = 16
+          MaxLength = 0
+          PasswordChar = '●'
+          PlaceholderText = 'Enter your pasword'
+          Password = '12345'
+          ParentFont = False
+          TabOrder = 0
+        end
+        object FluentCheckBox1: TFluentCheckBox
+          Left = 272
+          Height = 40
+          Top = 16
+          Width = 159
+          Align = alLeft
+          AutoSize = True
+          BorderSpacing.Around = 16
+          Caption = 'Show password'
+          OnChange = FluentCheckBox1Change
+          ParentFont = False
+        end
+      end
+    end
+    object PageStatus: TPage
+      object Label15: TLabel
+        Left = 24
+        Height = 47
+        Top = 24
+        Width = 863
+        Align = alTop
+        BorderSpacing.Around = 24
+        Caption = 'Status'
+        Font.Height = -35
+        Font.Name = 'Segoe UI Semibold'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label16: TLabel
+        Left = 31
+        Height = 25
+        Top = 102
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = 'Represents a ProgressRing and ProgressBar controls'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object lblProgressRing: TLabel
+        Left = 31
+        Height = 25
+        Top = 158
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = '1. ProgressRing'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object panProgressRing: TPanel
+        Left = 31
+        Height = 206
+        Top = 214
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        BevelOuter = bvNone
+        ClientHeight = 206
+        ClientWidth = 849
+        Color = 15987699
+        ParentColor = False
+        TabOrder = 0
+        object ProgressRing1: TFluentProgressRing
+          Left = 16
+          Height = 96
+          Top = 16
+          Width = 96
+          BorderSpacing.Around = 16
+          Max = 100
+          ProgressStyle = psIndeterminate
+          Value = 75
+        end
+        object frbDeterminate: TFluentRadioButton
+          Tag = 1
+          Left = 536
+          Height = 40
+          Top = 64
+          Width = 132
+          AutoSize = True
+          Caption = 'Determinate'
+          OnChange = ProgressRingChangeState
+          ParentFont = False
+        end
+        object frbPaused: TFluentRadioButton
+          Tag = 2
+          Left = 536
+          Height = 40
+          Top = 104
+          Width = 90
+          AutoSize = True
+          Caption = 'Paused'
+          OnChange = ProgressRingChangeState
+          ParentFont = False
+        end
+        object Error: TFluentRadioButton
+          Tag = 3
+          Left = 536
+          Height = 40
+          Top = 144
+          Width = 72
+          AutoSize = True
+          Caption = 'Error'
+          OnChange = ProgressRingChangeState
+          ParentFont = False
+        end
+        object frbIndeterminate: TFluentRadioButton
+          Left = 536
+          Height = 40
+          Top = 24
+          Width = 145
+          AutoSize = True
+          Caption = 'Indeterminate'
+          Checked = True
+          OnChange = ProgressRingChangeState
+          ParentFont = False
+        end
+        object FluentSlider2: TFluentSlider
+          Left = 200
+          Height = 40
+          Top = 104
+          Width = 320
+          Max = 100
+          Value = 75
+          ShowTip = True
+          TickFrequency = 10
+          Visible = False
+          OnValueChanged = FluentSlider2ValueChanged
+        end
+        object FluentCheckBox2: TFluentCheckBox
+          Left = 201
+          Height = 40
+          Top = 24
+          Width = 214
+          Caption = 'Background line'
+          OnChange = FluentCheckBox2Change
+          ParentFont = False
+        end
+        object lblProgressRingValue: TFluentTextBlock
+          Left = 201
+          Height = 24
+          Top = 144
+          Width = 72
+          Caption = 'Value: 75'
+          Visible = False
+        end
+      end
+      object lblProgressBar: TLabel
+        Left = 31
+        Height = 25
+        Top = 451
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = '2. ProgressBar'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object panProgressBar: TPanel
+        Left = 31
+        Height = 206
+        Top = 507
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        BevelOuter = bvNone
+        ClientHeight = 206
+        ClientWidth = 849
+        Color = 15987699
+        ParentColor = False
+        TabOrder = 1
+        object frbDeterminate1: TFluentRadioButton
+          Tag = 1
+          Left = 536
+          Height = 40
+          Top = 64
+          Width = 132
+          AutoSize = True
+          Caption = 'Determinate'
+          Checked = True
+          OnChange = ProgressBarChangeState
+          ParentFont = False
+        end
+        object frbPaused1: TFluentRadioButton
+          Tag = 2
+          Left = 536
+          Height = 40
+          Top = 104
+          Width = 90
+          AutoSize = True
+          Caption = 'Paused'
+          OnChange = ProgressBarChangeState
+          ParentFont = False
+        end
+        object Error1: TFluentRadioButton
+          Tag = 3
+          Left = 536
+          Height = 40
+          Top = 144
+          Width = 72
+          AutoSize = True
+          Caption = 'Error'
+          OnChange = ProgressBarChangeState
+          ParentFont = False
+        end
+        object frbIndeterminate1: TFluentRadioButton
+          Left = 536
+          Height = 40
+          Top = 24
+          Width = 145
+          AutoSize = True
+          Caption = 'Indeterminate'
+          OnChange = ProgressBarChangeState
+          ParentFont = False
+        end
+        object slBarValue: TFluentSlider
+          Left = 200
+          Height = 40
+          Top = 104
+          Width = 320
+          Max = 100
+          Value = 75
+          ShowTip = True
+          TickFrequency = 10
+          OnValueChanged = slBarValueValueChanged
+        end
+        object lblProgressBarValue: TLabel
+          Left = 200
+          Height = 25
+          Top = 144
+          Width = 76
+          Caption = 'Value: 75'
+          Font.Height = -19
+          ParentColor = False
+          ParentFont = False
+        end
+        object ProgressBar1: TFluentProgressBar
+          Left = 16
+          Height = 40
+          Top = 24
+          Width = 504
+          Max = 100
+          Value = 75
+        end
+      end
+    end
+    object PageDialog: TPage
+      object lblContentDialog: TLabel
+        Left = 24
+        Height = 47
+        Top = 24
+        Width = 863
+        Align = alTop
+        BorderSpacing.Around = 24
+        Caption = 'ContentDialog'
+        Font.Height = -35
+        Font.Name = 'Segoe UI Semibold'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label13: TLabel
+        Left = 31
+        Height = 25
+        Top = 102
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = 'Represents a ContentDialog'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object LabelDialog1: TLabel
+        Left = 31
+        Height = 25
+        Top = 158
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = '1. Simple dialog box'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object Panel1: TPanel
+        Left = 31
+        Height = 74
+        Top = 214
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        BevelOuter = bvNone
+        ClientHeight = 74
+        ClientWidth = 849
+        Color = 15987699
+        ParentColor = False
+        TabOrder = 0
+        object btnShowDialog1: TFluentButton
+          Left = 16
+          Height = 42
+          Top = 16
+          Width = 128
+          Align = alLeft
+          AutoSize = True
+          BorderSpacing.Around = 16
+          Caption = 'Show dialog'
+          OnClick = btnShowDialog1Click
+          ParentFont = False
+        end
+        object lblResult1: TLabel
+          Left = 160
+          Height = 42
+          Top = 16
+          Width = 673
+          Align = alClient
+          BorderSpacing.Around = 16
+          Caption = ' '
+          Font.Height = -19
+          Layout = tlCenter
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+      end
+      object LabelDialog2: TLabel
+        Left = 31
+        Height = 25
+        Top = 319
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = '2. Dialog box with content'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object Panel2: TPanel
+        Left = 31
+        Height = 74
+        Top = 375
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        BevelOuter = bvNone
+        ClientHeight = 74
+        ClientWidth = 849
+        Color = 15987699
+        ParentColor = False
+        TabOrder = 1
+        object btnShowDialog2: TFluentButton
+          Left = 16
+          Height = 42
+          Top = 16
+          Width = 128
+          Align = alLeft
+          AutoSize = True
+          BorderSpacing.Around = 16
+          Caption = 'Show dialog'
+          OnClick = btnShowDialog2Click
+          ParentFont = False
+        end
+        object lblResult2: TLabel
+          Left = 160
+          Height = 42
+          Top = 16
+          Width = 673
+          Align = alClient
+          BorderSpacing.Around = 16
+          Caption = ' '
+          Font.Height = -19
+          Layout = tlCenter
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+      end
+      object LabelDialog5: TLabel
+        Left = 31
+        Height = 25
+        Top = 480
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = '3. Dialog box with ProgressBar'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object Panel10: TPanel
+        Left = 31
+        Height = 74
+        Top = 536
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        BevelOuter = bvNone
+        ClientHeight = 74
+        ClientWidth = 849
+        Color = 15987699
+        ParentColor = False
+        TabOrder = 2
+        object btnShowDialog3: TFluentButton
+          Left = 16
+          Height = 42
+          Top = 16
+          Width = 128
+          Align = alLeft
+          AutoSize = True
+          BorderSpacing.Around = 16
+          Caption = 'Show dialog'
+          OnClick = btnShowDialog3Click
+          ParentFont = False
+        end
+        object lblResult3: TLabel
+          Left = 160
+          Height = 42
+          Top = 16
+          Width = 673
+          Align = alClient
+          BorderSpacing.Around = 16
+          Caption = ' '
+          Font.Height = -19
+          Layout = tlCenter
+          ParentColor = False
+          ParentFont = False
+          WordWrap = True
+        end
+      end
+    end
+    object PageNavigation: TPage
+      object Label11: TLabel
+        Left = 24
+        Height = 47
+        Top = 24
+        Width = 863
+        Align = alTop
+        BorderSpacing.Around = 24
+        Caption = 'Navigation'
+        Font.Height = -35
+        Font.Name = 'Segoe UI Semibold'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label12: TLabel
+        Left = 31
+        Height = 25
+        Top = 102
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = 'Represents a NavigationView control'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object sbNavigation: TScrollBox
+        Left = 16
+        Height = 628
+        Top = 158
+        Width = 879
+        HorzScrollBar.Page = 228
+        VertScrollBar.Page = 163
+        VertScrollBar.Tracking = True
+        Align = alClient
+        BorderSpacing.Around = 16
+        BorderStyle = bsNone
+        ClientHeight = 628
+        ClientWidth = 879
+        Color = 15987699
+        ParentColor = False
+        TabOrder = 0
+        object Panel5: TPanel
+          Left = 0
+          Height = 54
+          Top = 0
+          Width = 879
+          Align = alTop
+          BevelOuter = bvNone
+          ClientHeight = 54
+          ClientWidth = 879
+          TabOrder = 0
+          object BackBtn: TFluentIconButton
+            Left = 4
+            Height = 46
+            Top = 4
+            Width = 52
+            PathIcon.PathString = 'M2,30L62,30M28,2L2,30L28,58S'
+            PathIcon.CodePoint = 59179
+            PathIcon.Scale = 1
+            Align = alLeft
+            BorderSpacing.Around = 4
+            Enabled = False
+            OnClick = BackBtnClick
+            Caption = 'BackBtn'
+            Font.Height = -15
+            ParentFont = False
+          end
+          object FluentIconButton2: TFluentIconButton
+            Left = 60
+            Height = 46
+            Top = 4
+            Width = 52
+            PathIcon.PathString = 'M5,57A12,22,12,12,-72,0A52,22,10,10,0,94A46,46,12,12,108,180A2,46,12,12,-180,-90A2,6,12,12,-90,0A17,6,12,12,0,54L32,14A46,14,12,12,0,90S'
+            PathIcon.CodePoint = 59448
+            PathIcon.Scale = 1
+            Align = alLeft
+            BorderSpacing.Around = 4
+            Caption = 'FluentIconButton2'
+            Font.Height = -15
+            ParentFont = False
+          end
+          object FluentIconButton3: TFluentIconButton
+            Left = 116
+            Height = 46
+            Top = 4
+            Width = 52
+            PathIcon.PathString = 'A6,46,12,12,-180,-90A6,6,12,12,-90,0A38,6,12,12,0,45A46,14,12,12,45,90A46,46,12,12,90,180ZM14,58A14,34,8,8,-90,0A42,34,8,8,0,90L50,58M18,6A18,14,8,8,-90,-180A34,14,8,8,180,90L42,6S'
+            PathIcon.CodePoint = 59214
+            PathIcon.Scale = 1
+            Align = alLeft
+            BorderSpacing.Around = 4
+            Caption = 'FluentIconButton3'
+            Font.Height = -15
+            ParentFont = False
+          end
+          object FluentIconButton4: TFluentIconButton
+            Left = 172
+            Height = 46
+            Top = 4
+            Width = 52
+            PathIcon.PathString = 'M6,34A26,6,28,28,-45,135A10,42,16,16,135,315L34,22.5S'
+            PathIcon.CodePoint = 59171
+            PathIcon.Scale = 1
+            Align = alLeft
+            BorderSpacing.Around = 4
+            Caption = 'FluentIconButton4'
+            Font.Height = -15
+            ParentFont = False
+          end
+          object FluentIconButton5: TFluentIconButton
+            Left = 823
+            Height = 46
+            Top = 4
+            Width = 52
+            PathIcon.PathString = 'T0,0,44,64PM16,42C44,32,24,36,31,32M16,42C44,16,19,26,27,16S1UM42,15L42,5L60,24L42,43L42,33S1M54,46,A42,46,12,12,90,180A6,46,12,12,180,270A6,10,12,12,270,360L26,10S'
+            PathIcon.CodePoint = 59181
+            PathIcon.Scale = 1
+            Align = alRight
+            BorderSpacing.Around = 4
+            Caption = 'FluentIconButton5'
+            Font.Height = -15
+            ParentFont = False
+          end
+        end
+        object FluentNavigationView2: TFluentNavigationView
+          Left = 0
+          Height = 574
+          Top = 54
+          Width = 60
+          Color = 15987699
+          ParentFont = False
+          OnSelectMenuItem = FluentNavigationView2SelectMenuItem
+          OnChangeNavigationStatus = FluentNavigationView2ChangeNavigationStatus
+          CompactMode = True
+          MenuItems = <          
+            item
+              Caption = 'Home'
+              Icon.PathString = 'A27,2,10,10,-45,45A51,24,7,7,45,90A46,46,12,12,90,180A38,54,4,4,-180,-90A34,38,4,4,90,0A26,38,4,4,0,-90A22,54,4,4,90,180A6,46,12,12,-180,-90A6,24,7,7,-90,-45ZS'
+              Icon.CodePoint = 59407
+              Icon.Scale = 1
+            end          
+            item
+              Caption = 'Mail'
+              Icon.PathString = 'R2,10,60,48,8M62,20,L32,38,L2,20S'
+              Icon.CodePoint = 59157
+              Icon.Scale = 1
+            end          
+            item
+              Caption = 'Account'
+              Icon.PathString = 'E18,2,28,28S M52,38A46,38,12,12,0,90 C6,44,58,68,6,68A6,38,12,12,-90,0ZS'
+              Icon.CodePoint = 59259
+              Icon.Scale = 1
+            end          
+            item
+              Caption = 'Sync'
+              Icon.PathString = 'A2,2,60,60,-90,60M58,18L58,2M58,18L42,18SA2,2,60,60,90,240M6,46L6,62M6,46L22,46S'
+              Icon.CodePoint = 59541
+              Icon.Scale = 1
+            end          
+            item
+              Caption = 'Help'
+              Icon.PathString = 'A18,6,28,28,-90,90C32,46,46,32,32,32SE29,54,6,6F1'
+              Icon.CodePoint = 59543
+              Icon.Scale = 1
+            end>
+          SelectMenuItem = 0
+        end
+        object Panel6: TPanel
+          Left = 60
+          Height = 574
+          Top = 54
+          Width = 819
+          Align = alClient
+          BevelOuter = bvNone
+          ClientHeight = 574
+          ClientWidth = 819
+          Color = clWindow
+          ParentColor = False
+          TabOrder = 1
+          object LabelHeadNav: TLabel
+            Left = 31
+            Height = 47
+            Top = 31
+            Width = 757
+            Align = alTop
+            BorderSpacing.Around = 31
+            Caption = 'Home'
+            Font.Height = -35
+            Font.Name = 'Segoe UI Semibold'
+            ParentColor = False
+            ParentFont = False
+          end
+        end
+      end
+    end
+    object PageSettings: TPage
+      object Label2: TLabel
+        Left = 24
+        Height = 47
+        Top = 24
+        Width = 863
+        Align = alTop
+        BorderSpacing.Around = 24
+        Caption = 'Settings'
+        Font.Height = -35
+        Font.Name = 'Segoe UI Semibold'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label8: TLabel
+        Left = 31
+        Height = 25
+        Top = 102
+        Width = 849
+        Align = alTop
+        BorderSpacing.Around = 31
+        Caption = 'Fluent Controls Gallery'
+        Font.Height = -19
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object FluentHyperlinkCodebot: TFluentHyperlinkButton
+        Left = 31
+        Height = 40
+        Top = 169
+        Width = 244
+        AutoSize = True
+        Caption = 'Codebot Cross Home Page'
+        OnClick = FluentHyperlinkCodebotClick
+        ParentFont = False
+      end
+      object FluentControlsHyperlink: TFluentHyperlinkButton
+        Left = 31
+        Height = 40
+        Top = 224
+        Width = 248
+        AutoSize = True
+        Caption = 'Fluent Controls Home Page'
+        OnClick = FluentControlsHyperlinkClick
+        ParentFont = False
+      end
+    end
+  end
+  object ContentDialog1: TContentDialog
+    DefaultButton = drPrimary
+    Title = 'Save your work?'
+    PrimaryButtonText = 'Save'
+    SecondaryButtonText = 'Don''t Save'
+    CloseButtonText = 'Cancel'
+    Icon.Scale = 1
+    Left = 56
+    Top = 690
+  end
+end
