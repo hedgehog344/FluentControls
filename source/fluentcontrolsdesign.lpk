@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="FluentControlsDesign"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Version Minor="7" Release="9"/>
+    <Files>
+      <Item>
+        <Filename Value="contentdialogeditor.pas"/>
+        <UnitName Value="ContentDialogEditor"/>
+      </Item>
+      <Item>
+        <Filename Value="contentdialogeditorform.lfm"/>
+        <Type Value="LFM"/>
+      </Item>
+      <Item>
+        <Filename Value="contentdialogeditorform.pas"/>
+        <UnitName Value="ContentDialogEditorForm"/>
+      </Item>
+      <Item>
+        <Filename Value="fluent_icons.lrs"/>
+        <Type Value="LRS"/>
+      </Item>
+      <Item>
+        <Filename Value="fluentdesigneditors.pas"/>
+        <UnitName Value="FluentDesignEditors"/>
+      </Item>
+      <Item>
+        <Filename Value="pathiconeditor.lfm"/>
+        <Type Value="LFM"/>
+      </Item>
+      <Item>
+        <Filename Value="pathiconeditor.pas"/>
+        <UnitName Value="PathIconEditor"/>
+      </Item>
+      <Item>
+        <Filename Value="registration.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="Registration"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="fluentcontrols"/>
+        <MinVersion Minor="7" Valid="True"/>
+      </Item>
+      <Item>
+        <PackageName Value="IDEIntf"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

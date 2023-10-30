@@ -1,0 +1,60 @@
+object FormContentEditor: TFormContentEditor
+  Left = 525
+  Height = 279
+  Top = 277
+  Width = 406
+  Caption = 'FormContentEditor'
+  ClientHeight = 279
+  ClientWidth = 406
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.2.0.4'
+  object Panel1: TPanel
+    Left = 0
+    Height = 21
+    Top = 0
+    Width = 406
+    Align = alTop
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 21
+    ClientWidth = 406
+    TabOrder = 0
+    object SpeedButton1: TSpeedButton
+      Left = 3
+      Height = 15
+      Top = 3
+      Width = 78
+      Align = alLeft
+      AutoSize = True
+      BorderSpacing.Around = 3
+      Caption = 'Add CheckBox'
+      Flat = True
+      Margin = 0
+      OnClick = SpeedButton1Click
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 84
+      Height = 15
+      Top = 3
+      Width = 73
+      Align = alLeft
+      AutoSize = True
+      BorderSpacing.Around = 3
+      Caption = 'Add RadioBtn'
+      Flat = True
+      Margin = 0
+      OnClick = SpeedButton2Click
+    end
+  end
+  object ListBox1: TListBox
+    Left = 0
+    Height = 258
+    Top = 21
+    Width = 406
+    Align = alClient
+    ItemHeight = 0
+    TabOrder = 1
+  end
+end

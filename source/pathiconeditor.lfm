@@ -1,0 +1,168 @@
+object PathIconEditorForm: TPathIconEditorForm
+  Left = 796
+  Height = 483
+  Top = 258
+  Width = 698
+  Caption = 'PathIcon'
+  ClientHeight = 483
+  ClientWidth = 698
+  Constraints.MinHeight = 450
+  Constraints.MinWidth = 688
+  DesignTimePPI = 120
+  Position = poScreenCenter
+  LCLVersion = '2.2.4.0'
+  object FluentIconView: TFluentIconView
+    Left = 20
+    Height = 180
+    Top = 40
+    Width = 180
+    PathIcon.AccentColor = 14120960
+    OnRenderGlyph = FluentIconViewRenderGlyph
+  end
+  object MemoPath: TMemo
+    Left = 214
+    Height = 180
+    Top = 40
+    Width = 232
+    Anchors = [akTop, akLeft, akRight]
+    OnChange = MemoPathChange
+    ScrollBars = ssBoth
+    TabOrder = 0
+  end
+  object EditCodePoint: TEdit
+    Left = 161
+    Height = 28
+    Top = 240
+    Width = 90
+    OnEditingDone = EditCodePointEditingDone
+    TabOrder = 1
+  end
+  object ButtonOk: TButton
+    Left = 444
+    Height = 31
+    Top = 436
+    Width = 112
+    Anchors = [akRight, akBottom]
+    Caption = 'OK'
+    ModalResult = 1
+    TabOrder = 2
+  end
+  object ButtonCancel: TButton
+    Left = 568
+    Height = 31
+    Top = 436
+    Width = 112
+    Anchors = [akRight, akBottom]
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 3
+  end
+  object ButtonApply: TButton
+    Left = 336
+    Height = 31
+    Top = 240
+    Width = 110
+    Anchors = [akTop, akRight]
+    Caption = 'Apply'
+    OnClick = ButtonApplyClick
+    TabOrder = 4
+  end
+  object ColorButtonAccentColor: TColorButton
+    Left = 161
+    Height = 35
+    Top = 340
+    Width = 90
+    BorderWidth = 2
+    ButtonColorSize = 16
+    ButtonColor = clHighlight
+    Flat = True
+    OnColorChanged = ColorButtonAccentColorColorChanged
+  end
+  object Label1: TLabel
+    Left = 20
+    Height = 20
+    Top = 248
+    Width = 41
+    Caption = 'Glyph:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 20
+    Height = 20
+    Top = 300
+    Width = 116
+    Caption = 'ForegroundColor:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 20
+    Height = 20
+    Top = 351
+    Width = 84
+    Caption = 'AccentColor:'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 88
+    Height = 20
+    Top = 10
+    Width = 28
+    Caption = 'Icon'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 300
+    Height = 20
+    Top = 10
+    Width = 28
+    Caption = 'Path'
+    ParentColor = False
+  end
+  object ColorButtonColor: TColorButton
+    Left = 161
+    Height = 35
+    Top = 290
+    Width = 90
+    BorderWidth = 2
+    ButtonColorSize = 16
+    ButtonColor = clBlack
+    Flat = True
+    OnColorChanged = ColorButtonColorColorChanged
+  end
+  object MemoHelp: TMemo
+    Left = 450
+    Height = 180
+    Top = 40
+    Width = 238
+    Anchors = [akTop, akRight]
+    Color = clForm
+    Lines.Strings = (
+      'M - MoveTo(x, y)'
+      'L - LineTo(x, y)'
+      'E - Ellipse(x, y, w, h)'
+      'T - Rectangle(x, y, w, h)'
+      'R - RoundRectangle'
+      'A - ArcTo(x, y, w, h, a1, a2)'
+      'C - Quadratic Bezier Curve'
+      'C - Cubic Bezier Curve'
+      'F - Fill()'
+      'P - Clip path'
+      'U - Unclip path'
+      'Z - Close path'
+      'S - Stroke()'
+    )
+    OnChange = MemoPathChange
+    ReadOnly = True
+    ScrollBars = ssBoth
+    TabOrder = 5
+  end
+  object Label6: TLabel
+    Left = 534
+    Height = 20
+    Top = 10
+    Width = 32
+    Anchors = [akTop, akRight]
+    Caption = 'Help'
+    ParentColor = False
+  end
+end
