@@ -606,7 +606,9 @@ type
   IconEqualizer	= $e9e9,
   IconProcess	= $e9f3,
   IconProcessing= $e9f5,
-  IconReportDocument= $e9f9
+  IconReportDocument= $e9f9,
+
+  IconDateTime = $ec92
  );
 
   const
@@ -989,6 +991,10 @@ type
   IconAcceptPath =  'M2,30L22,50L62,10S';
   IconAcceptName = 'Accept';
 
+  //ec92 IconDateTime
+  IconDateTimePath = RightCircleBadgeClip+'PR6,6,52,52,6M6,18L58,18SUE28,28,36,36F1M46,38L46,46L54,46S2';
+  IconDateTimeName = 'DateTime';
+
 
 const
   IconPathsE7: array of TIdentMapEntry = (
@@ -1156,9 +1162,6 @@ const
     );
 
   IconPathsE8: array of TIdentMapEntry = (
-
-
-
   //e800
     (Value: ord(IconHome);   Name: IconHomePath),               //e80f
   //e810
@@ -1260,45 +1263,82 @@ const
     (Value: ord(IconAccept);   Name: IconAcceptName)            //e8fb
     );
 
+  IconPathsEC: array of TIdentMapEntry = (
+    (Value: ord(IconDateTime);   Name: IconDateTimePath)            //ec92
+  );
+  IconNamesEC: array of TIdentMapEntry = (
+    (Value: ord(IconDateTime);   Name: IconDateTimeName)            //ec92
+  );
 
   function GetIconPathByIndex(Index: integer): string;
   function GetIconNameByIndex(Index: integer): string;
+  function IdentToCodePoint(const Ident: string; out CodePoint: Longint): Boolean;
+  function GetIconPathByIdent(const Ident: string): string;
 
 implementation
 
-  function GetIconPathByIndex(Index: integer): string;
+function GetIconPathByIndex(Index: integer): string;
+begin
+  Result:= '';
+  if Index<$e700 then exit;
+  if Index<$e800 then
   begin
-    Result:= '';
-    if Index<$e700 then exit;
-    if Index<$e800 then
-    begin
-      IntToIdent(Index, Result, IconPathsE7);
-      exit;
-    end;
-    if Index<$e900 then
-    begin
-      IntToIdent(Index, Result, IconPathsE8);
-      exit;
-    end;
+    IntToIdent(Index, Result, IconPathsE7);
+    exit;
   end;
-
-  function GetIconNameByIndex(Index: integer): string;
+  if Index<$e900 then
   begin
-    Result:= '';
-    if Index<$e700 then exit;
-    if Index<$e800 then
-    begin
-      IntToIdent(Index, Result, IconNamesE7);
-      exit;
-    end;
-    if Index<$e900 then
-    begin
-      IntToIdent(Index, Result, IconNamesE8);
-      exit;
-    end;
+    IntToIdent(Index, Result, IconPathsE8);
+    exit;
   end;
+  if Index<$ed00 then
+  begin
+    IntToIdent(Index, Result, IconPathsEC);
+    exit;
+  end;
+end;
 
+function GetIconNameByIndex(Index: integer): string;
+begin
+  Result:= '';
+  if Index<$e700 then exit;
+  if Index<$e800 then
+  begin
+    IntToIdent(Index, Result, IconNamesE7);
+    exit;
+  end;
+  if Index<$e900 then
+  begin
+    IntToIdent(Index, Result, IconNamesE8);
+    exit;
+  end;
+  if Index<$ed00 then
+  begin
+    IntToIdent(Index, Result, IconNamesEC);
+    exit;
+  end;
+end;
 
+function IdentToCodePoint(const Ident: string; out CodePoint: Longint
+  ): Boolean;
+begin
+  if IdentToInt(Ident, CodePoint, IconNamesE7) then exit(true);
+  if IdentToInt(Ident, CodePoint, IconNamesE8) then exit(true);
+  if IdentToInt(Ident, CodePoint, IconNamesEC) then exit(true);
+  CodePoint:= 0;
+  Result:= false;
+end;
+
+function GetIconPathByIdent(const Ident: string): string;
+var
+  cp: integer;
+begin
+  Result:= '';
+  if IdentToCodePoint(Ident, cp) then
+  begin
+    Result:= GetIconPathByIndex(cp);
+  end;
+end;
 
 end.
 
